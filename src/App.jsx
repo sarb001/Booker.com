@@ -5,7 +5,7 @@ function App() {
 
   return (
    <>
-     <h2> Hello Brother  </h2>
+     <h2> Inside the File Structure  </h2>
   </>
   )
 }
