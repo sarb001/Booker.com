@@ -2,8 +2,6 @@ import React from 'react'
 import facilities from '../../data/facilities.json';
 
 const Facilities = () => {
-  console.log('facil -',facilities);
-
   return (
     <div className="facilties-component m-16 ">
        <h2> Facilities  </h2>
