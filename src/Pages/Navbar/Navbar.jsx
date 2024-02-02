@@ -37,10 +37,10 @@ const Navbar = () => {
                       lg:grid lg:grid-cols-4 lg: ` 
                   
                   }>
-                      <li className='m-4'>   <a href = "#"> Home </a>  </li>
-                      <li className='m-4'>   <a href = "#"> Gallery </a>  </li>
-                      <li className='m-4'>   <a href = "#"> Rooms </a> </li>
-                      <li className='m-4'>   <a href = "#"> Contact </a>  </li>
+                      <li className='m-4'>   <a href = "/">        Home </a>  </li>
+                      <li className='m-4'>   <a href = "/gallery"> Gallery </a>  </li>
+                      <li className='m-4'>   <a href = "/rooms">   Rooms </a> </li>
+                      <li className='m-4'>   <a href = "/contact"> Contact </a>  </li>
                   </ul>
               </div>
 
