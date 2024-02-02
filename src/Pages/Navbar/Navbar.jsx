@@ -1,28 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css' ;
 import { FaShoppingCart } from "react-icons/fa";
+import { MdCancel } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const Navbar = () => {
+   const [showlink,setshowlink] = useState(true);
+
+   const handlelinks = () => {
+     setshowlink(!showlink);
+   }  
+ 
   return (
     <>
-       <nav className ='bg-red-900 w-full h-full'>
-          <div> 
-             <a href = "#" className=''> Booker </a>
-          </div>
+       <div className="w-full">
+        <nav className='bg-teal-200 md:bg-red-600  lg:bg-blue-600 
+        w-full h-full p-4'>
+          
+            <div className='
+             flex justify-between items-center
+            lg:flex lg:justify-around lg:items-center
+            md:flex md:justify-around md:items-center
+            
+            '>
+              
+              <div> 
+                <a href = "#" > Bookr </a>
+              </div>
+              
+              <div className='lg:block'> 
+                  <ul className={`flex flex-col absolute  top-[70px] w-[370px] right-0
+                      md:top-0 md:flex  md:flex-row md:w-full  md:static 
+                       
+                      ${showlink ? "hidden" : "block" }
+                      lg:grid lg:grid-cols-4 lg: ` 
+                  
+                  }>
+                      <li className='m-4'>   <a href = "#"> Home </a>  </li>
+                      <li className='m-4'>   <a href = "#"> Gallery </a>  </li>
+                      <li className='m-4'>   <a href = "#"> Rooms </a> </li>
+                      <li className='m-4'>   <a href = "#"> Contact </a>  </li>
+                  </ul>
+              </div>
 
-          <div> 
-             <ul> 
-              <li> Home </li>
-              <li> Gallery </li>
-              <li> Rooms </li>
-              <li> Contact </li>
-            </ul>
-          </div>
+              <div className=' md:block lg:block xl:block  absolute right-16  md:static md:right-0'>
+                <a className='text-4xl'> <FaShoppingCart /> </a>
+              </div>
+            
+              <div className='block md:hidden relative' onClick={handlelinks}>
+                <a href = "#" className='text-4xl'> {showlink ?  <GiHamburgerMenu />  : <MdCancel /> }  </a>
+              </div>
 
-          <div>
-             <a href = "#"> <FaShoppingCart /> </a>
-          </div>
-       </nav>
+            </div>
+        </nav>
+    </div>
     </>
   )
 }
