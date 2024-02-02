@@ -6,7 +6,6 @@
       "image": "https://images.unsplash.com/photo-1625504615927-c14f4f309b63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGhlYWRzaG90fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
 
-
     {
       "id": 2,
       "name": "Emily Johnson",
@@ -21,6 +20,8 @@
       "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
     },
 
+
+
     {
       "id": 4,
       "name": "Sophia Brown",
@@ -34,7 +35,6 @@
       "testimony": "I can't say enough good things about this hotel. The ambiance is elegant, the food is delicious, and the staff is incredibly courteous. This will be my go-to hotel whenever I'm in town.",
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
-
     
     {
       "id": 6,
