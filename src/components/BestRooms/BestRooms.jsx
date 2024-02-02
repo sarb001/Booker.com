@@ -2,7 +2,9 @@ import React from 'react'
 
 const BestRooms = () => {
   return (
-    <div>BestRooms</div>
+     <div className="bedroom-component">
+       <h2> BedRoom Component Cards   </h2>
+     </div>
   )
 }
 
