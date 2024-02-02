@@ -1,7 +1,11 @@
 import React from 'react';
 import rooms from '../../data/rooms.json';
 
+import { Link  } from 'react-router-dom';
+
+
 const BestRooms = () => {
+
   return (
      <div className="flex flex-wrap m-16 ">
       {rooms.map((data,index) => {
@@ -13,7 +17,12 @@ const BestRooms = () => {
               </div>
               <div> Name - {data.name} </div>
               <div> Guests - {data.guests} </div>
-              <button className='p-2  border-2 border-black rounded-xl '> Book now ${data.price} </button>
+
+              <Link className = 'p-2  border-2 border-black rounded-xl'
+              to = {`/room/${data.id}`}> 
+                 Book now ${data.price} 
+               </Link>
+
             </div>
           </>
          )

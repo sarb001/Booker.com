@@ -26,7 +26,7 @@ const Navbar = () => {
             '>
               
               <div> 
-                <a href = "#" > Bookr </a>
+                <a href = "/" > Bookr </a>
               </div>
               
               <div className='lg:block'> 
