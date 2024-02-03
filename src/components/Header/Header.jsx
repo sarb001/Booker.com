@@ -30,6 +30,16 @@ const Header = () => {
       }
     )
 
+    const handleguests = (name,operation) => {
+      setguests((prev) => {
+         return {
+          ...prev,
+          [name] : operation === 'i' ? guests[name] + 1   : guests[name] - 1,
+      }
+      })
+    }
+
+    console.log('total guests 1-',guests);
 
   return (
     <div className="header m-16">
@@ -48,26 +58,26 @@ const Header = () => {
         </div>
 
         <div>
-          
+
           <div> 
             <span> Adult   </span> 
-            <button className='border-red-700 border-2 '>  <GrSubtractCircle /> </button> 
+            <button className='border-red-700 border-2 '  onClick={() => handleguests('adult','d')}>  <GrSubtractCircle /> </button> 
               {guests.adult}
-            <button className='border-black   border-2 '> <IoAddCircle /> </button> 
+            <button className='border-black   border-2 '  onClick={() => handleguests('adult','i')}> <IoAddCircle /> </button> 
           </div>
 
           <div> 
           <span> Children   </span> 
-            <button  className='border-red-700 border-2 '>  <GrSubtractCircle /> </button> 
+            <button  className='border-red-700 border-2 '  onClick={() => handleguests('children','d')}>  <GrSubtractCircle /> </button> 
                 {guests.children} 
-            <button className='border-black border-2 '>  <IoAddCircle /> </button> 
-          </div>
+            <button className='border-black border-2 '     onClick={() => handleguests('children','i')}>  <IoAddCircle /> </button> 
+          </div>  
 
           <div>
           <span> Room  </span> 
-           <button className='border-red-700 border-2 '>  <GrSubtractCircle /> </button> 
+           <button className='border-red-700 border-2 '   onClick={() => handleguests('room','d')}>  <GrSubtractCircle /> </button> 
             {guests.room}
-          <button className='border-black border-2 '>  <IoAddCircle /> </button> 
+          <button className='border-black border-2 '      onClick={() => handleguests('room','i')}>  <IoAddCircle /> </button> 
           </div>
 
         </div>
