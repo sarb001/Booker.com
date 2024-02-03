@@ -9,11 +9,10 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "guests": 1,
+      "adults": 1,
       "children": 2,
       "bedSize": "1 king",
-      "type": "Deluxe",
-      "featured": true
+      "type": "Deluxe"
     },
     
     {
@@ -26,11 +25,10 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "guests": 4,
+      "adults": 4,
       "children": 3,
       "bedSize": "1 king",
-      "type": "Standard",
-      "featured": false
+      "type": "Standard"
     },
 
     {
@@ -43,11 +41,10 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "guests": 1,
+      "adults": 1,
       "children": false,
       "bedSize": "1 king",
-      "type": "Studio",
-      "featured": true
+      "type": "Studio"
     },
 
     
@@ -61,11 +58,10 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "guests": 4,
+      "adults": 4,
       "children": false,
       "bedSize": "1 king",
-      "type": "Studio",
-      "featured": false
+      "type": "Studio"
     },
 
     {
@@ -78,11 +74,10 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "guests": 2,
+      "adults": 2,
       "children": false,
       "bedSize": "1 king",
-      "type": "Studio",
-      "featured": true
+      "type": "Studio"
     },
 
     {
@@ -95,10 +90,9 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "guests": 6,
+      "adults": 6,
       "children": false,
       "bedSize": "1 king",
-      "type": "Studio",
-      "featured": false
+      "type": "Studio"
     }
   ]
