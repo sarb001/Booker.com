@@ -19,7 +19,7 @@ function App() {
         <Route path = "/gallery"  element = {<Gallery />}>  </Route>
         <Route path = "/contact"  element = {<Contact />}>  </Route>
         <Route path = "/rooms"    element = {<Rooms />}>  </Route>
-        <Route path = "/room/:id"    element = {<SpecificRoom />}>  </Route>
+        <Route path = "/room/:roomid"    element = {<SpecificRoom />}>  </Route>
 
         <Route path = "/cart"     element = {<Cart />}>  </Route>
      </Routes>
