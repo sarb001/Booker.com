@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <div className="header m-16">
-      <div className='flex flex-row gap-20'>
+      <div className='flex flex-row gap-10'>
     
         Using Date
         <h2>  Current Date - {date[0].startDate.toLocaleDateString()} </h2>
@@ -84,6 +84,10 @@ const Header = () => {
           <button className='border-black border-2 '      onClick={() => handleguests('room','i')}>  <IoAddCircle /> </button> 
           </div>
 
+        </div>
+
+        <div>
+            <button className='bg-slate-600 px-6 py-2 '> Search </button>
         </div>
 
     </div>

@@ -41,12 +41,11 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "adults": 1,
-      "children": false,
+      "adults": 4,
+      "children": 1,
       "bedSize": "1 king",
       "type": "Studio"
     },
-
     
     {
       "id": 4,
@@ -59,7 +58,7 @@
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
       "adults": 4,
-      "children": false,
+      "children": 2,
       "bedSize": "1 king",
       "type": "Studio"
     },
@@ -74,8 +73,8 @@
         "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
         "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
       ],
-      "adults": 2,
-      "children": false,
+      "adults": 6,
+      "children": 4,
       "bedSize": "1 king",
       "type": "Studio"
     },
@@ -93,6 +92,86 @@
       "adults": 6,
       "children": false,
       "bedSize": "1 king",
+      "type": "Studio"
+    },
+
+    {
+      "id": 7,
+      "name": "The Mexico HolBox",
+      "img": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVzb3J0fGVufDB8fDB8fHww",
+      "price": 240,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 3,
+      "children": 5,
+      "bedSize": "1 king",
+      "type": "Studio"
+    },
+
+    {
+      "id": 8,
+      "name": "The Mandarian Orient Hotel",
+      "img": "https://images.unsplash.com/photo-1586611292717-f828b167408c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 550,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 3,
+      "children": 2,
+      "bedSize": "2 king",
+      "type": "Studio"
+    },
+
+    {
+      "id": 9,
+      "name": "Just Shine SF",
+      "img": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D",
+      "price": 550,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 5,
+      "children": 6,
+      "bedSize": "2 king",
+      "type": "Studio"
+    },
+
+    {
+      "id": 10,
+      "name": " Hardrock hotel & Casino",
+      "img": "https://images.unsplash.com/photo-1535827841776-24afc1e255ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D",
+      "price": 550,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 5,
+      "children": 3,
+      "bedSize": "2 king",
+      "type": "Studio"
+    },
+
+    {
+      "id": 11,
+      "name": "International Indonesia Bali ",
+      "img": "https://images.unsplash.com/photo-1606046604972-77cc76aee944?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG90ZWxzfGVufDB8fDB8fHww",
+      "price": 550,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 5,
+      "children": 3,
+      "bedSize": "2 king",
       "type": "Studio"
     }
   ]
