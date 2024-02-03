@@ -42,6 +42,11 @@ const Header = () => {
     console.log('total guests 1-',guests);
     console.log('date is --',date);
 
+    const searchHotels = () => {
+        
+    }
+
+
   return (
     <div className="header m-16">
       <div className='flex flex-row gap-10'>
@@ -87,7 +92,7 @@ const Header = () => {
         </div>
 
         <div>
-            <button className='bg-slate-600 px-6 py-2 '> Search </button>
+            <button className='bg-slate-600 px-6 py-2 '  onClick={() => searchHotels()} > Search </button>
         </div>
 
     </div>
