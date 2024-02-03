@@ -14,7 +14,7 @@ import { IoAddCircle } from "react-icons/io5";
 
 const Header = () => {
 
-   const [state,setState] = useState([
+   const [date,setdate] = useState([
      {
        startDate : new Date(),
        endDate   : new Date(),
@@ -40,19 +40,23 @@ const Header = () => {
     }
 
     console.log('total guests 1-',guests);
+    console.log('date is --',date);
 
   return (
     <div className="header m-16">
       <div className='flex flex-row gap-20'>
     
-        Using Date 
+        Using Date
+        <h2>  Current Date - {date[0].startDate.toLocaleDateString()} </h2>
+        <h2>  Last Date -  {date[0].endDate.toLocaleDateString()} </h2>
+         
         <div>
            <DateRangePicker 
-            onChange={item => setState([item.selection])}
+            onChange={item => setdate([item.selection])}
             showSelectionPreview = {true}
             moveRangeOnFirstSelection = {false}
             months={1}
-            ranges={state}
+            ranges={date}
             direction='horizontal'
            />
         </div>
