@@ -8,8 +8,8 @@ const Facilities = () => {
         {facilities.map((data) => {
            return (
 
-              <div className='grid  grid-cols-2 '>
-                <div className='w-[100%] h-[90%] overflow-hidden' key = {data.id}>
+              <div className='grid  grid-cols-2'  key = {data.id}>
+                <div className='w-[100%] h-[90%] overflow-hidden' >
                    <img className='w-full h-full object-cover  rounded-2xl' src = {data.img}   alt = {data.title} /> 
                 </div>
 

@@ -11,6 +11,8 @@ import { addDays } from 'date-fns';
 import MOCKDATA from '../../data/MOCK_DATA (4).json';
 import { GrSubtractCircle } from "react-icons/gr";
 import { IoAddCircle } from "react-icons/io5";
+import { useDispatch, useSelector } from 'react-redux';
+import { sortbyadults } from '../../Reducers/FIlterSlice';
 
 const Header = () => {
 
@@ -24,9 +26,9 @@ const Header = () => {
 
     const [guests,setguests] = useState(
       {
-        adult : 1,
-        children : 2,
-        room : 1
+        adult : 0,
+        children : 0,
+        room : 0
       }
     )
 
@@ -37,13 +39,17 @@ const Header = () => {
           [name] : operation === 'i' ? guests[name] + 1   : guests[name] - 1,
       }
       })
-    }
+    };
 
-    console.log('total guests 1-',guests);
-    console.log('date is --',date);
-
+      const dispatch   = useDispatch();
+      const adultcount = useSelector(state => state?.adults ? state.adults : 5)  ;
+      console.log(' adult count 11 -',adultcount);
+    
     const searchHotels = () => {
-        
+      console.log('button clicked 1 ',);
+      console.log(' adult count 22 -', adultcount);
+      dispatch(sortbyadults(adultcount));
+      console.log('button clicked 2 ',);
     }
 
 
@@ -71,7 +77,7 @@ const Header = () => {
           <div> 
             <span> Adult   </span> 
             <button className='border-red-700 border-2 '  onClick={() => handleguests('adult','d')}>  <GrSubtractCircle /> </button> 
-              {guests.adult}
+              {adultcount}
             <button className='border-black   border-2 '  onClick={() => handleguests('adult','i')}> <IoAddCircle /> </button> 
           </div>
 
@@ -92,7 +98,7 @@ const Header = () => {
         </div>
 
         <div>
-            <button className='bg-slate-600 px-6 py-2 '  onClick={() => searchHotels()} > Search </button>
+            <button className='bg-slate-600 px-6 py-2'  onClick={() => searchHotels()} > Search </button>
         </div>
 
     </div>
