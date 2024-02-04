@@ -6,34 +6,50 @@ import { useSelector } from 'react-redux';
 
 const BestRooms = () => {
 
-    const filteredrooms = useSelector(state => state?.filter.hotels);
-    console.log('filtered romms -',filteredrooms);
-
+      const featuredrooms = rooms.filter((room) => room.featured === true);
+      console.log('feature rooms-',featuredrooms);
 
   return (
-     <div className="flex flex-wrap m-16 ">
-      {filteredrooms && filteredrooms?.map((data) => {
+    <div className='m-16 '>
+          <h2> Best Rooms here - </h2>  
+     <div className="flex flex-wrap ">
+      {featuredrooms && featuredrooms?.map((data) => {
          return (
           <div key = {data.id}>
-            <div className="w-[370px] h-[450px]  overflow-hidden bg-slate-500 m-4">
+            <div className="w-[370px] h-[460px]  p-4 overflow-hidden bg-slate-500 m-4">
 
-              <div className='w-[100%] h-[70%]  object-cover '> 
-                  <img className='w-full h-full'  src = {data.img}   alt = {data.name} />
+              
+                <div className='w-[100%] h-[60%]  object-cover '> 
+                    <img className='w-full h-full'  src = {data.img}   alt = {data.name} />
+                </div>
+           
+
+              <div className='h-[40%] flex flex-col gap-2 '>
+
+            
+                  <div> Name - {data.name} </div>
+                  <div className='text-2xl'> Only Adults - {data?.adults} </div>
+
+                  <div className='text-2xl'>  
+                    {data?.children.length >= 1 ? data?.children  : "No Children Included" } 
+                  </div>
+
+                  <div>
+                    <Link className = 'm-4 p-2  border-2 border-black rounded-xl'
+                    to = {`/room/${data.id}`}> 
+                      Book now ${data.price} 
+                    </Link>
+                  </div>
+
               </div>
-
-              <div> Name - {data.name} </div>
-              <div className='text-3xl'> Adults - {data?.adults} </div>
-
-              <Link className = 'p-2  border-2 border-black rounded-xl'
-              to = {`/room/${data.id}`}> 
-                 Book now ${data.price} 
-               </Link>
 
             </div>
           </div>
          )
       })}
+
      </div>
+    </div>
   )
 }
 

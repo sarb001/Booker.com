@@ -12,7 +12,7 @@ import MOCKDATA from '../../data/MOCK_DATA (4).json';
 import { GrSubtractCircle } from "react-icons/gr";
 import { IoAddCircle } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
-import { sortbyadults } from '../../Reducers/FIlterSlice';
+import { sortbyadults , sortbychildrens } from '../../Reducers/FIlterSlice';
 
 const Header = () => {
 
@@ -39,7 +39,6 @@ const Header = () => {
            operation === 'i' ? newadutls + 1 : newadutls - 1
         )
       }
-     
 
      const handlechildren = (operation) => {
       setnewchildren(
@@ -47,20 +46,11 @@ const Header = () => {
         )
       }
 
-
-      // const handleguests = (name,operation) => {
-      //   setguests((prev) => {
-      //      return {
-      //       ...prev,
-      //       [name] : operation === 'i' ? guests[name] + 1   : guests[name] - 1,
-      //   }
-      //   })
-      // };
-    
     const searchHotels = () => {
       console.log('button clicked 1 ',);
       console.log(' adult count 22 -', newadutls);
       dispatch(sortbyadults(newadutls));
+      dispatch(sortbychildrens(newadutls));
       console.log('button clicked 2 ',);
     }
 
@@ -76,7 +66,7 @@ const Header = () => {
     
         Using Date
         <h2>  Current Date - {date[0].startDate.toLocaleDateString()} </h2>
-        <h2>  Last Date -  {date[0].endDate.toLocaleDateString()} </h2>
+        <h2>  Last Date -    {date[0].endDate.toLocaleDateString()} </h2>
          
         <div>
            <DateRangePicker 
