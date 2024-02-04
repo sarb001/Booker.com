@@ -25,7 +25,6 @@ const BestRooms = () => {
            
 
               <div className='h-[40%] flex flex-col gap-2 '>
-
             
                   <div> Name - {data.name} </div>
                   <div className='text-2xl'> Only Adults - {data?.adults} </div>

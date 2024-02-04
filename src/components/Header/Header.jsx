@@ -13,6 +13,7 @@ import { GrSubtractCircle } from "react-icons/gr";
 import { IoAddCircle } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { sortbyadults , sortbychildrens } from '../../Reducers/FIlterSlice';
+import Search from '../SearhComponent/Search';
 
 const Header = () => {
 
@@ -24,88 +25,34 @@ const Header = () => {
           }
         ]);
         
-      const [room,setroom] = useState(0);     
-      const dispatch   = useDispatch();
-      const { adults , children } = useSelector(state => state?.filter);
-
-      const [newadutls,setnewadutls] = useState(adults);     
-      const [newchildren,setnewchildren] = useState(children);    
-
-      console.log(' nweadult out -',newadutls);
-      console.log(' new children out -',newchildren);
-
-     const handleadults = (operation) => {
-        setnewadutls(
-           operation === 'i' ? newadutls + 1 : newadutls - 1
-        )
-      }
-
-     const handlechildren = (operation) => {
-      setnewchildren(
-           operation === 'i' ? newchildren + 1 : newchildren - 1
-        )
-      }
-
-    const searchHotels = () => {
-      console.log('button clicked 1 ',);
-      console.log(' adult count 22 -', newadutls);
-      dispatch(sortbyadults(newadutls));
-      dispatch(sortbychildrens(newadutls));
-      console.log('button clicked 2 ',);
-    }
-
-    const handleroom = () => {
-        setroom();
-    }
+  
 
   return (
     
     <div className="header m-16">
 
-      <div className='flex flex-row gap-10'>
+      <div className='flex flex-row gap-40'>
     
-        Using Date
-        <h2>  Current Date - {date[0].startDate.toLocaleDateString()} </h2>
-        <h2>  Last Date -    {date[0].endDate.toLocaleDateString()} </h2>
-         
-        <div>
-           <DateRangePicker 
-            onChange={item => setdate([item.selection])}
-            showSelectionPreview = {true}
-            moveRangeOnFirstSelection = {false}
-            months={1}
-            ranges={date}
-            direction='horizontal'
-           />
-        </div>
+         <div>
+          <span>  Using Date </span> 
+          <div>  Current Date - {date[0].startDate.toLocaleDateString()} </div>
+          <div>  Last Date -    {date[0].endDate.toLocaleDateString()} </div>
 
-        <div>
-
-          <div> 
-            <span> Adult   </span> 
-            <button className='border-red-700 border-2 '  onClick={() => handleadults('d')}>  <GrSubtractCircle /> </button> 
-              {newadutls}
-            <button className='border-black   border-2 '  onClick={() => handleadults('i')}> <IoAddCircle /> </button> 
-          </div>
-
-          <div> 
-          <span> Children   </span> 
-            <button  className='border-red-700 border-2 '  onClick={() => handlechildren('d')}>  <GrSubtractCircle /> </button> 
-                {newchildren} 
-            <button className='border-black border-2 '     onClick={() => handlechildren('i')}>  <IoAddCircle /> </button> 
-          </div>  
+         </div>
 
           <div>
-          <span> Room  </span> 
-           <button className='border-red-700 border-2 '   onClick={() => handleroom('room','d')}>  <GrSubtractCircle /> </button> 
-            {room}
-          <button className='border-black border-2 '      onClick={() => handleroom('room','i')}>  <IoAddCircle /> </button> 
+            <DateRangePicker 
+              onChange={item => setdate([item.selection])}
+              showSelectionPreview = {true}
+              moveRangeOnFirstSelection = {false}
+              months={1}
+              ranges={date}
+              direction='horizontal'
+            />
           </div>
 
-        </div>
-
-        <div>
-            <button className='bg-slate-600 px-6 py-2'  onClick={() => searchHotels()} > Search </button>
+         <div>
+              <Search   />
         </div>
 
      </div>
