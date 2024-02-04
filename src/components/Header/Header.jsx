@@ -16,22 +16,14 @@ import { sortbyadults } from '../../Reducers/FIlterSlice';
 
 const Header = () => {
 
-   const [date,setdate] = useState([
-     {
-       startDate : new Date(),
-       endDate   : new Date(),
-       key       : 'selection'
-     }
-   ]);
-
-    // const [guests,setguests] = useState(
-    //   {
-    //     adult : 0,
-    //     children : 0,
-    //     room : 0
-    //   }
-    // )
-
+        const [date,setdate] = useState([
+          {
+            startDate : new Date(),
+            endDate   : new Date(),
+            key       : 'selection'
+          }
+        ]);
+        
       const [room,setroom] = useState(0);     
       const dispatch   = useDispatch();
       const { adults , children } = useSelector(state => state?.filter);
