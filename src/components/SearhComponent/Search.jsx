@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { sortbyadults, sortbychildrens } from '../../Reducers/FIlterSlice';
 import { IoAddCircle } from "react-icons/io5";
 import { GrSubtractCircle } from "react-icons/gr";
+import { useNavigate } from 'react-router-dom' ;
 
 const Search = () => {
 
     const [room,setroom] = useState(0);     
     const dispatch   = useDispatch();
+    const navigate = useNavigate();
     const { adults , children } = useSelector(state => state?.filter);
 
     const [newadutls,setnewadutls] = useState(adults);     
@@ -16,21 +18,22 @@ const Search = () => {
     console.log(' nweadult out -',newadutls);
     console.log(' new children out -',newchildren);
 
-   const handleadults = (operation) => {
-      setnewadutls(
-         operation === 'i' ? newadutls + 1 : newadutls - 1
-      )
-    }
+    const handleadults = (operation) => {
+        setnewadutls(
+            operation === 'i' ? newadutls + 1 : newadutls - 1
+        )
+        }
 
-   const handlechildren = (operation) => {
-    setnewchildren(
-         operation === 'i' ? newchildren + 1 : newchildren - 1
-      )
-    }
+    const handlechildren = (operation) => {
+        setnewchildren(
+            operation === 'i' ? newchildren + 1 : newchildren - 1
+        )
+        }
 
   const searchHotels = () => {
     dispatch(sortbyadults(newadutls));
     dispatch(sortbychildrens(newchildren));
+    navigate('/rooms');
   }
 
   const handleroom = () => {

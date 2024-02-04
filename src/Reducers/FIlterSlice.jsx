@@ -6,6 +6,7 @@ export const FilterSlice = createSlice({
     name: 'filter',
     initialState: {
         rooms : room,
+        filterdata : [],
         adults : 1,
         children : 1,
     },
@@ -17,8 +18,9 @@ export const FilterSlice = createSlice({
             console.log(' adult state - ',JSON.stringify(state.rooms));
         },
         sortbychildrens : (state,action) => {
-            state.rooms = state.rooms?.filter((room) => room.children === action.payload)
-            console.log(' children state-',JSON.stringify(state.rooms));
+            state.rooms  = state.rooms?.filter((room) => room.children === action.payload);
+            state.filterdata = state.rooms;
+            console.log(' children state 2 -',JSON.stringify(state.filterdata));
         }
     }
 })

@@ -132,7 +132,52 @@
 
     {
       "id": 12,
-      "name": "Economy Class Room",
+      "name": "Economy Class Room 1",
+      "img": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "price": 100,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 3,
+      "children": 2,
+      "bedSize": "2 king",
+      "type": "Studio"
+    },
+    {
+      "id": 17,
+      "name": "Economy Class Room 2",
+      "img": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "price": 100,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 3,
+      "children": 2,
+      "bedSize": "2 king",
+      "type": "Studio"
+    },
+    {
+      "id": 18,
+      "name": "Economy Class Room 3 ",
+      "img": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "price": 100,
+      "about": [
+        "This comfortable, modern hotel is set in the urban center of Pontevedra, 10 minutes’ walk from the historic quarter. It offers a terrace and chic, air-conditioned rooms with free Wi-Fi.",
+        "Accommodations at Hotel Room features contemporary design and central heating. All rooms include a 26-inch plasma satellite TV, a work desk and a private bathroom with hairdryer.",
+        "Breakfast is served daily and the hotel’s restaurant offers a varied, modern menu from Monday to Saturday. Several bars, restaurants and shops are within 5 minutes’ walk."
+      ],
+      "adults": 3,
+      "children": 2,
+      "bedSize": "2 king",
+      "type": "Studio"
+    },
+    {
+      "id": 19,
+      "name": "Economy Class Room 4",
       "img": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
       "price": 100,
       "about": [
