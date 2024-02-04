@@ -24,37 +24,62 @@ const Header = () => {
      }
    ]);
 
-    const [guests,setguests] = useState(
-      {
-        adult : 0,
-        children : 0,
-        room : 0
-      }
-    )
+    // const [guests,setguests] = useState(
+    //   {
+    //     adult : 0,
+    //     children : 0,
+    //     room : 0
+    //   }
+    // )
 
-    const handleguests = (name,operation) => {
-      setguests((prev) => {
-         return {
-          ...prev,
-          [name] : operation === 'i' ? guests[name] + 1   : guests[name] - 1,
-      }
-      })
-    };
-
+      const [room,setroom] = useState(0);     
       const dispatch   = useDispatch();
-      const adultcount = useSelector(state => state?.adults ? state.adults : 5)  ;
-      console.log(' adult count 11 -',adultcount);
+      const { adults , children } = useSelector(state => state?.filter);
+
+      const [newadutls,setnewadutls] = useState(adults);     
+      const [newchildren,setnewchildren] = useState(children);    
+
+      console.log(' nweadult out -',newadutls);
+      console.log(' new children out -',newchildren);
+
+     const handleadults = (operation) => {
+        setnewadutls(
+           operation === 'i' ? newadutls + 1 : newadutls - 1
+        )
+      }
+     
+
+     const handlechildren = (operation) => {
+      setnewchildren(
+           operation === 'i' ? newchildren + 1 : newchildren - 1
+        )
+      }
+
+
+      // const handleguests = (name,operation) => {
+      //   setguests((prev) => {
+      //      return {
+      //       ...prev,
+      //       [name] : operation === 'i' ? guests[name] + 1   : guests[name] - 1,
+      //   }
+      //   })
+      // };
     
     const searchHotels = () => {
       console.log('button clicked 1 ',);
-      console.log(' adult count 22 -', adultcount);
-      dispatch(sortbyadults(adultcount));
+      console.log(' adult count 22 -', newadutls);
+      dispatch(sortbyadults(newadutls));
       console.log('button clicked 2 ',);
     }
 
+    const handleroom = () => {
+        setroom();
+    }
 
   return (
+    
     <div className="header m-16">
+
       <div className='flex flex-row gap-10'>
     
         Using Date
@@ -76,23 +101,23 @@ const Header = () => {
 
           <div> 
             <span> Adult   </span> 
-            <button className='border-red-700 border-2 '  onClick={() => handleguests('adult','d')}>  <GrSubtractCircle /> </button> 
-              {adultcount}
-            <button className='border-black   border-2 '  onClick={() => handleguests('adult','i')}> <IoAddCircle /> </button> 
+            <button className='border-red-700 border-2 '  onClick={() => handleadults('d')}>  <GrSubtractCircle /> </button> 
+              {newadutls}
+            <button className='border-black   border-2 '  onClick={() => handleadults('i')}> <IoAddCircle /> </button> 
           </div>
 
           <div> 
           <span> Children   </span> 
-            <button  className='border-red-700 border-2 '  onClick={() => handleguests('children','d')}>  <GrSubtractCircle /> </button> 
-                {guests.children} 
-            <button className='border-black border-2 '     onClick={() => handleguests('children','i')}>  <IoAddCircle /> </button> 
+            <button  className='border-red-700 border-2 '  onClick={() => handlechildren('d')}>  <GrSubtractCircle /> </button> 
+                {newchildren} 
+            <button className='border-black border-2 '     onClick={() => handlechildren('i')}>  <IoAddCircle /> </button> 
           </div>  
 
           <div>
           <span> Room  </span> 
-           <button className='border-red-700 border-2 '   onClick={() => handleguests('room','d')}>  <GrSubtractCircle /> </button> 
-            {guests.room}
-          <button className='border-black border-2 '      onClick={() => handleguests('room','i')}>  <IoAddCircle /> </button> 
+           <button className='border-red-700 border-2 '   onClick={() => handleroom('room','d')}>  <GrSubtractCircle /> </button> 
+            {room}
+          <button className='border-black border-2 '      onClick={() => handleroom('room','i')}>  <IoAddCircle /> </button> 
           </div>
 
         </div>
@@ -101,9 +126,8 @@ const Header = () => {
             <button className='bg-slate-600 px-6 py-2'  onClick={() => searchHotels()} > Search </button>
         </div>
 
-    </div>
+     </div>
     </div>
   )
-}
-
+  }
 export default Header
