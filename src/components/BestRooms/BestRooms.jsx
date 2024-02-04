@@ -31,7 +31,7 @@ const BestRooms = () => {
                   <div className='text-2xl'> Only Adults - {data?.adults} </div>
 
                   <div className='text-2xl'>  
-                    {data?.children.length >= 1 ? data?.children  : "No Children Included" } 
+                    {data?.children >= 1 ? ` Children - ${data?.children}` : "No Children Included" } 
                   </div>
 
                   <div>

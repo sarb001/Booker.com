@@ -10,7 +10,7 @@ const SpecificRoom = () => {
     const selectedroom = room.find((room) => room.id ===  parseInt(roomid));
     console.log('selected room -',selectedroom); 
 
-     const { about, bedSize ,featured , guests ,id , img ,name ,price , type  } =  selectedroom;
+     const { about, bedSize ,featured , adults ,id , img ,name ,price , children  } =  selectedroom;
 
   return (
     <>
@@ -23,9 +23,9 @@ const SpecificRoom = () => {
         </div>
            <div className='text-xl'> {about}  </div>
         <span className='text-3xl'>
-          <div> Guests - {guests}  </div>
+          <div>  Adults - {adults}  </div>
           <div>  Bed Size - {bedSize}  </div>
-          <div> Room Type - {type} </div>
+          <div> No. of  Children - {children} </div>
         </span>
       </div>
 
