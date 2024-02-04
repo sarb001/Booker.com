@@ -30,7 +30,7 @@ const Search = () => {
 
   const searchHotels = () => {
     dispatch(sortbyadults(newadutls));
-    dispatch(sortbychildrens(newchildren));
+    // dispatch(sortbychildrens(newchildren));
   }
 
   const handleroom = () => {
