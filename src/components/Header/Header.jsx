@@ -24,32 +24,38 @@ const Header = () => {
           }
         ]);
         
+        const [openDate,setopenDate] = useState(false);
+
+        const handledates = () => {
+           setopenDate(!openDate);
+        }
 
   return (
     
     <div className="header m-16">
 
       <div className='flex flex-row gap-40'>
-    
-         <div>
-          <span>  Using Date </span> 
-          <div>  Current Date - {date[0].startDate.toLocaleDateString()} </div>
-          <div>  Last Date -    {date[0].endDate.toLocaleDateString()} </div>
 
-         </div>
+         <div  onClick={handledates}   className = 'relative bg-slate-500 p-2 w-[50%] h-[20%] flex flex-row justify-evenly'>
+          <div>  {date[0].startDate.toLocaleDateString()} </div>
+          <div>  {date[0].endDate.toLocaleDateString()} </div>
 
-          <div>
-            <DateRangePicker 
+         <div className='absolute top-5'>
+            { openDate && (
+              <DateRangePicker 
               onChange={item => setdate([item.selection])}
               showSelectionPreview = {true}
               moveRangeOnFirstSelection = {false}
               months={1}
               ranges={date}
               direction='horizontal'
-            />
+              />
+              )
+            }
           </div>
+            </div>
 
-         <div>
+         <div className='searchbar'>
               <Search   />
         </div>
 

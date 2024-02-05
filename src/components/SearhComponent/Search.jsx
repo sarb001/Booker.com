@@ -45,14 +45,22 @@ const Search = () => {
 
               <div> 
                 <span> Adult   </span> 
-                <button className='border-red-700 border-2 '  onClick={() => handleadults('d')}>  <GrSubtractCircle /> </button> 
+                <button 
+                 disabled = {newadutls <=1}
+                className='border-red-700 border-2 '  onClick={() => handleadults('d')}> 
+                 <GrSubtractCircle /> 
+                </button> 
                   {newadutls}
-                <button className='border-black   border-2 '  onClick={() => handleadults('i')}> <IoAddCircle /> </button> 
+                <button className='border-black   border-2 '  onClick={() => handleadults('i')}> 
+                 <IoAddCircle /> 
+                </button> 
               </div>
 
               <div> 
               <span> Children   </span> 
-                <button  className='border-red-700 border-2 '  onClick={() => handlechildren('d')}>  <GrSubtractCircle /> </button> 
+                <button 
+                   disabled = {newchildren <= 1 }
+                className='border-red-700 border-2 '  onClick={() => handlechildren('d')}>  <GrSubtractCircle /> </button> 
                     {newchildren} 
                 <button className='border-black border-2 '     onClick={() => handlechildren('i')}>  <IoAddCircle /> </button> 
               </div>  
