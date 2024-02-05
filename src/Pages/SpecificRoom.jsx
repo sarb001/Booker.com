@@ -12,6 +12,11 @@ const SpecificRoom = () => {
 
      const { about, bedSize ,featured , adults ,id , img ,name ,price , children  } =  selectedroom;
 
+   const handleaddtocart = (id) => {
+       console.log('ading cart id -',id);
+   }
+
+
   return (
     <>
      <div className="specificroom m-32 mt-16 flex flex-row">
@@ -31,6 +36,9 @@ const SpecificRoom = () => {
 
       <div className='w-[35%]'>
            <div className='text-3xl'>  Price - {price} </div>
+           <div className='m-8'>
+             <button  onClick={() => handleaddtocart(id)} className='py-2 px-8 bg-slate-500'> Add to Cart </button>
+           </div>
       </div>
 
     </div>

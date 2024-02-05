@@ -35,6 +35,7 @@ const Rooms = () => {
                             <div className='text-2xl'> Name - {data.name} </div>
                             <div className='text-2xl'> Adults - {data.adults} </div>
                             <div className='text-2xl'> Children - {data.children} </div>
+                            <div className='text-2xl'> Total Rooms - {data.room_qty} </div>
 
                             <div className='m-4'>
                               <Link className = 'p-2  border-2 border-black rounded-xl'

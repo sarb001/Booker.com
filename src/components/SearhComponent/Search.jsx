@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { sortbyadults, sortbychildrens } from '../../Reducers/FIlterSlice';
+import { sortbyadults, sortbychildrens, sortbyrooms } from '../../Reducers/FIlterSlice';
 import { IoAddCircle } from "react-icons/io5";
 import { GrSubtractCircle } from "react-icons/gr";
 import { useNavigate } from 'react-router-dom' ;
 
 const Search = () => {
 
-    const [room,setroom] = useState(0);     
-    const dispatch   = useDispatch();
-    const navigate = useNavigate();
-    const { adults , children } = useSelector(state => state?.filter);
-
+  const dispatch   = useDispatch();
+  const navigate = useNavigate();
+  const { adults , children  , numberofrooms } = useSelector(state => state?.filter);
+  
+    const [room,setroom] = useState(numberofrooms);     
     const [newadutls,setnewadutls] = useState(adults);     
     const [newchildren,setnewchildren] = useState(children);    
 
+    console.log(' new room out -',newadutls);
     console.log(' nweadult out -',newadutls);
     console.log(' new children out -',newchildren);
 
@@ -30,14 +31,17 @@ const Search = () => {
         )
         }
 
-  const searchHotels = () => {
-    dispatch(sortbyadults(newadutls));
-    dispatch(sortbychildrens(newchildren));
-    navigate('/rooms');
-  }
+    const searchHotels = () => {
+      dispatch(sortbyadults(newadutls));
+      dispatch(sortbychildrens(newchildren));
+      dispatch(sortbyrooms(room));
+      navigate('/rooms');
+    }
 
-  const handleroom = () => {
-      setroom();
+  const handleroom = (operation) => {
+      setroom(
+        operation === 'i' ? room + 1 : room - 1
+    )
   }
 
   return (
@@ -67,9 +71,11 @@ const Search = () => {
 
               <div>
               <span> Room  </span> 
-              <button className='border-red-700 border-2 '   onClick={() => handleroom('room','d')}>  <GrSubtractCircle /> </button> 
+              <button 
+              disabled = {room <= 1 }
+              className='border-red-700 border-2 '   onClick={() => handleroom('d')}>  <GrSubtractCircle /> </button> 
                 {room}
-              <button className='border-black border-2 '      onClick={() => handleroom('room','i')}>  <IoAddCircle /> </button> 
+              <button className='border-black border-2 '      onClick={() => handleroom('i')}>  <IoAddCircle /> </button> 
               </div>
 
               <div>

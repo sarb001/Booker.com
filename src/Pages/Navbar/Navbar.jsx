@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css' ;
 import { FaShoppingCart } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
@@ -11,7 +11,8 @@ const Navbar = () => {
    const handlelinks = () => {
      setshowlink(!showlink);
    }  
- 
+   
+
   return (
     <>
        <div className="w-full">
@@ -20,8 +21,8 @@ const Navbar = () => {
           
             <div className='
              flex justify-between items-center
-            lg:flex lg:justify-around lg:items-center
-            md:flex md:justify-around md:items-center '>
+             lg:flex lg:justify-around lg:items-center
+             md:flex md:justify-around md:items-center '>
               
               <div> 
                 <a href = "/" > Bookr </a>
