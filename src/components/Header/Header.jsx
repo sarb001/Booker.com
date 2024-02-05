@@ -8,7 +8,6 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css' ;
 import  { DateRangePicker } from  'react-date-range' ;
 import { addDays } from 'date-fns';
-import MOCKDATA from '../../data/MOCK_DATA (4).json';
 import { GrSubtractCircle } from "react-icons/gr";
 import { IoAddCircle } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
