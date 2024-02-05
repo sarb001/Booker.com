@@ -24,7 +24,7 @@ export const FilterSlice = createSlice({
             console.log(' children state 2 -',JSON.stringify(state.filterdata));
         },
         sortbyrooms : (state,action) => {
-             state.rooms = state.rooms?.filter((data) => data.room_qty <= action.payload);
+             state.rooms = state.rooms?.filter((data) => data.room_qty >= action.payload);
              state.filterdata = state.rooms;
              console.log('after rooms -',JSON.stringify(state.filterdata));
         }
