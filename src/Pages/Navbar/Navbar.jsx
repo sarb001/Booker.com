@@ -21,9 +21,7 @@ const Navbar = () => {
             <div className='
              flex justify-between items-center
             lg:flex lg:justify-around lg:items-center
-            md:flex md:justify-around md:items-center
-            
-            '>
+            md:flex md:justify-around md:items-center '>
               
               <div> 
                 <a href = "/" > Bookr </a>
@@ -39,7 +37,6 @@ const Navbar = () => {
                   }>
                       <li className='m-4'>   <a href = "/">        Home </a>  </li>
                       <li className='m-4'>   <a href = "/gallery"> Gallery </a>  </li>
-                      <li className='m-4'>   <a href = "/rooms">   Rooms </a> </li>
                       <li className='m-4'>   <a href = "/contact"> Contact </a>  </li>
                   </ul>
               </div>
