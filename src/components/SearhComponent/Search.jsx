@@ -15,9 +15,9 @@ const Search = () => {
     const [newadutls,setnewadutls] = useState(adults);     
     const [newchildren,setnewchildren] = useState(children);    
 
-    console.log(' new room out -',newadutls);
-    console.log(' nweadult out -',newadutls);
-    console.log(' new children out -',newchildren);
+    console.log(' rooms in  -',room);
+    console.log(' new adults in -',newadutls);
+    console.log(' new children in -',newchildren);
 
     const handleadults = (operation) => {
         setnewadutls(

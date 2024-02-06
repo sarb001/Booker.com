@@ -9,7 +9,7 @@ export const FilterSlice = createSlice({
         filterdata : [],
         adults : 1,
         children : 1,
-        numberofrooms: 0,
+        numberofrooms: 1,
         cart : [],
     },
     reducers : {
@@ -32,11 +32,13 @@ export const FilterSlice = createSlice({
         addtoCart: (state,action) => {
              console.log('itesm in cart before -',JSON.stringify(state.cart));
              state.cart.push(action.payload);
+             localStorage.setItem("cartItems", JSON.stringify(state.cart));
              console.log('itesm in cart after -',JSON.stringify(state.cart));
-        },
-        removefromCart : (state,action) => {
-            state.cart = state.cart.filter((item) => item.id !==  action.payload);
-            console.log('item in paylaod -',JSON.stringify(state.cart));
+            },
+            removefromCart : (state,action) => {
+                state.cart = state.cart.filter((item) => item.id !==  action.payload);
+                localStorage.setItem("cartItems", JSON.stringify(state.cart));
+                console.log('item in paylaod -',JSON.stringify(state.cart));
         }
     }
 })

@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -49,8 +50,8 @@ const Navbar = () => {
               <div className=' md:block lg:block xl:grid-rows-2 xl:grid  absolute right-16  md:static md:right-0'>
                 <span> {cartitems.length} </span>   
                 <span>  
-                <a href = "/cart" className='text-4xl'> 
-                <FaShoppingCart /> </a>
+                <Link to = "/cart" className='text-4xl'> 
+                <FaShoppingCart /> </Link>
                 </span>
               </div>
             
