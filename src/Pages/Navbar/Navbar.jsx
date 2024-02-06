@@ -3,10 +3,14 @@ import './Navbar.css' ;
 import { FaShoppingCart } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
    const [showlink,setshowlink] = useState(true);
+
+   const cartitems = useSelector((state) => state.filter.cart);
+   console.log('cart item length- ',cartitems.length);
 
    const handlelinks = () => {
      setshowlink(!showlink);
@@ -42,8 +46,12 @@ const Navbar = () => {
                   </ul>
               </div>
 
-              <div className=' md:block lg:block xl:block  absolute right-16  md:static md:right-0'>
-                <a className='text-4xl'> <FaShoppingCart /> </a>
+              <div className=' md:block lg:block xl:grid-rows-2 xl:grid  absolute right-16  md:static md:right-0'>
+                <span> {cartitems.length} </span>   
+                <span>  
+                <a href = "/cart" className='text-4xl'> 
+                <FaShoppingCart /> </a>
+                </span>
               </div>
             
               <div className='block md:hidden relative' onClick={handlelinks}>

@@ -31,7 +31,7 @@ export const FilterSlice = createSlice({
         },
         addtoCart: (state,action) => {
             console.log('itesm in cart before -',JSON.stringify(state.cart));
-             state.cart = state.cart.push(action.payload);
+             state.cart.push(action.payload);
             console.log('itesm in cart after -',JSON.stringify(state.cart));
         }
     }

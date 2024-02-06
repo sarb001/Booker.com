@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams  , useNavigate } from 'react-router-dom'
 import room from '../data/rooms.json' ;
 import { useDispatch } from 'react-redux';
 import { addtoCart } from '../Reducers/FIlterSlice';
@@ -8,6 +8,7 @@ const SpecificRoom = () => {
 
     const { roomid  } = useParams();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     console.log(' url id is- ',roomid);
 
     const selectedroom = room.find((room) => room.id ===  parseInt(roomid));
@@ -18,7 +19,8 @@ const SpecificRoom = () => {
     const handleaddtocart = (cartitems) => {
        const  {id,name,img,price} = cartitems ;
        console.log('ading cart id -',{id,name,img,price});
-       dispatch(addtoCart(id));
+       dispatch(addtoCart({id,name,img,price}));
+       navigate('/cart');
     }
 
   return (
