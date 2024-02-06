@@ -10,6 +10,7 @@ export const FilterSlice = createSlice({
         adults : 1,
         children : 1,
         numberofrooms: 0,
+        cart : [],
     },
     reducers : {
         sortbyadults : (state,action) => {
@@ -27,10 +28,15 @@ export const FilterSlice = createSlice({
              state.rooms = state.rooms?.filter((data) => data.room_qty >= action.payload);
              state.filterdata = state.rooms;
              console.log('after rooms -',JSON.stringify(state.filterdata));
+        },
+        addtoCart: (state,action) => {
+            console.log('itesm in cart before -',JSON.stringify(state.cart));
+             state.cart = state.cart.push(action.payload);
+            console.log('itesm in cart after -',JSON.stringify(state.cart));
         }
     }
 })
 
-export const { sortbyadults ,sortbychildrens ,sortbyrooms } = FilterSlice.actions;
+export const { sortbyadults ,sortbychildrens ,sortbyrooms ,addtoCart } = FilterSlice.actions;
 
 export default FilterSlice.reducer;

@@ -1,21 +1,25 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import room from '../data/rooms.json' ;
+import { useDispatch } from 'react-redux';
+import { addtoCart } from '../Reducers/FIlterSlice';
 
 const SpecificRoom = () => {
 
     const { roomid  } = useParams();
+    const dispatch = useDispatch();
     console.log(' url id is- ',roomid);
 
     const selectedroom = room.find((room) => room.id ===  parseInt(roomid));
     console.log('selected room -',selectedroom); 
 
-     const { about, bedSize ,featured , adults ,id , img ,name ,price , children  } =  selectedroom;
+    const { about, bedSize ,featured , adults ,id , img ,name ,price , children  } =  selectedroom;
 
-   const handleaddtocart = (id) => {
-       console.log('ading cart id -',id);
-   }
-
+    const handleaddtocart = (cartitems) => {
+       const  {id,name,img,price} = cartitems ;
+       console.log('ading cart id -',{id,name,img,price});
+       dispatch(addtoCart(id));
+    }
 
   return (
     <>
@@ -26,6 +30,7 @@ const SpecificRoom = () => {
         <div className='object-cover w-[650px] h-[350px] my-8 rounded-2xl overflow-hidden'>
            <img className='w-full h-full' src = {img}  alt = {name} /> 
         </div>
+
            <div className='text-xl'> {about}  </div>
         <span className='text-3xl'>
           <div>  Adults - {adults}  </div>
@@ -37,7 +42,8 @@ const SpecificRoom = () => {
       <div className='w-[35%]'>
            <div className='text-3xl'>  Price - {price} </div>
            <div className='m-8'>
-             <button  onClick={() => handleaddtocart(id)} className='py-2 px-8 bg-slate-500'> Add to Cart </button>
+             <button  onClick={() => handleaddtocart({id,name,img,price})} className='py-2 px-8 bg-slate-500'>
+               Add to Cart </button>
            </div>
       </div>
 

@@ -4,7 +4,7 @@ import FilterSearchReducer from '../Reducers/FIlterSlice';
 
 const store = configureStore({
     reducer : {
-        filter :  FilterSearchReducer
+        filter :  FilterSearchReducer,
     }
 })
 

@@ -8,7 +8,6 @@ const Rooms = () => {
     const filterdataroom = useSelector(state => state.filter.filterdata);
     console.log('rooms data filter -',filterdataroom);
 
-
   return (
     <div className="rooms-container m-16 ">
 
