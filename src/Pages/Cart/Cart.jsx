@@ -13,14 +13,14 @@ const Cart = () => {
           <h3> Total Cart Items-  {cartitems.length} </h3>  
         </span> 
 
-        <div>
+          <div className='w-[70%]' >
            {cartitems && cartitems.length > 0 ? 
            (cartitems.map((data) => {
               return (
                 <>
                 <div className='grid grid-cols-2' key = {data.id}>
 
-                  <div className='bg-lime-300 p-4 '>  
+                  <div className='bg-lime-300 p-4 m-8 w-full'>  
                     <div className='flex flex-col'>
 
                       <div className='grid grid-cols-3 text-center'>
@@ -43,6 +43,10 @@ const Cart = () => {
                         </div>
                       </div>
 
+                      <div className='flex justify-end '>
+                        <button className='m-1 p-2 bg-slate-600'> Remove  </button>
+                      </div>
+
                     </div>
                   </div>
 
@@ -53,9 +57,14 @@ const Cart = () => {
             (
             <>
               'No Items Present'
-            </>) }
-        </div>
+            </>)}
 
+          </div>
+
+          <div className='w-[30%]'>
+                  <h2> Payment Section </h2>
+          </div>
+          
     </div>
   )
 }

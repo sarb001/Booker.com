@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams  , useNavigate } from 'react-router-dom'
 import room from '../data/rooms.json' ;
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addtoCart } from '../Reducers/FIlterSlice';
 
 const SpecificRoom = () => {
@@ -14,13 +14,23 @@ const SpecificRoom = () => {
     const selectedroom = room.find((room) => room.id ===  parseInt(roomid));
     console.log('selected room -',selectedroom); 
 
+    const maincart = useSelector((state) => state.filter.cart);
+
+    
     const { about, bedSize ,featured , adults ,id , img ,name ,price , children  } =  selectedroom;
 
+    const Alreadyfound = maincart.find((item) => item.id === selectedroom.id);
+    console.log('already Found -',Alreadyfound);
+
+
     const handleaddtocart = (cartitems) => {
-       const  {id,name,img,price} = cartitems ;
-       console.log('ading cart id -',{id,name,img,price});
-       dispatch(addtoCart({id,name,img,price}));
-       navigate('/cart');
+      if(!Alreadyfound){
+        const  {id,name,img,price} = cartitems ;
+        console.log('ading cart id -',{id,name,img,price});
+        dispatch(addtoCart({id,name,img,price}));
+        navigate('/cart');
+      }
+      console.log('Already Present in Cart');
     }
 
   return (
