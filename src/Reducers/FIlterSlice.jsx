@@ -30,13 +30,17 @@ export const FilterSlice = createSlice({
              console.log('after rooms -',JSON.stringify(state.filterdata));
         },
         addtoCart: (state,action) => {
-            console.log('itesm in cart before -',JSON.stringify(state.cart));
+             console.log('itesm in cart before -',JSON.stringify(state.cart));
              state.cart.push(action.payload);
-            console.log('itesm in cart after -',JSON.stringify(state.cart));
+             console.log('itesm in cart after -',JSON.stringify(state.cart));
+        },
+        removefromCart : (state,action) => {
+            state.cart = state.cart.filter((item) => item.id !==  action.payload);
+            console.log('item in paylaod -',JSON.stringify(state.cart));
         }
     }
 })
 
-export const { sortbyadults ,sortbychildrens ,sortbyrooms ,addtoCart } = FilterSlice.actions;
+export const { sortbyadults ,sortbychildrens ,sortbyrooms ,addtoCart ,removefromCart } = FilterSlice.actions;
 
 export default FilterSlice.reducer;

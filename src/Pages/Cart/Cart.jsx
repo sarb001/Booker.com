@@ -1,23 +1,32 @@
 import React from 'react'
 import './Cart.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { removefromCart } from '../../Reducers/FIlterSlice';
 
 const Cart = () => {
 
    const cartitems = useSelector((state) => state.filter.cart);
    console.log('cart items -',cartitems);
 
+   const dispatch = useDispatch();
+
+   const removefromcart = (id) => {
+       dispatch(removefromCart(id));
+       console.log('removed done ');
+   }
+
   return (
     <div className="cart-container m-16 ">
-        <span>
-          <h3> Total Cart Items-  {cartitems.length} </h3>  
-        </span> 
 
           <div className='w-[70%]' >
            {cartitems && cartitems.length > 0 ? 
            (cartitems.map((data) => {
               return (
                 <>
+              <span>
+                <h3> Total Cart Items-  {cartitems.length} </h3>  
+              </span> 
+
                 <div className='grid grid-cols-2' key = {data.id}>
 
                   <div className='bg-lime-300 p-4 m-8 w-full'>  
@@ -44,13 +53,17 @@ const Cart = () => {
                       </div>
 
                       <div className='flex justify-end '>
-                        <button className='m-1 p-2 bg-slate-600'> Remove  </button>
+                        <button className='m-1 p-2 bg-slate-600' onClick={() => removefromcart(data.id)}> Remove  </button>
                       </div>
 
                     </div>
                   </div>
 
                 </div>
+
+              <div className='w-[30%]'>
+                      <h2> Payment Section </h2>
+              </div>
                 </>
               )
            }) ) :
@@ -61,10 +74,6 @@ const Cart = () => {
 
           </div>
 
-          <div className='w-[30%]'>
-                  <h2> Payment Section </h2>
-          </div>
-          
     </div>
   )
 }

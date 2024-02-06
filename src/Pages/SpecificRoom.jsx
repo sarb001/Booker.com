@@ -15,24 +15,23 @@ const SpecificRoom = () => {
     console.log('selected room -',selectedroom); 
 
     const maincart = useSelector((state) => state.filter.cart);
-
     
     const { about, bedSize ,featured , adults ,id , img ,name ,price , children  } =  selectedroom;
 
     const Alreadyfound = maincart.find((item) => item.id === selectedroom.id);
     console.log('already Found -',Alreadyfound);
 
-
     const handleaddtocart = (cartitems) => {
       if(!Alreadyfound){
         const  {id,name,img,price} = cartitems ;
         console.log('ading cart id -',{id,name,img,price});
         dispatch(addtoCart({id,name,img,price}));
-        navigate('/cart');
+        return navigate('/cart');
+      }else{
+        return alert('Already Present in Cart');
       }
-      console.log('Already Present in Cart');
     }
-
+    
   return (
     <>
      <div className="specificroom m-32 mt-16 flex flex-row">
