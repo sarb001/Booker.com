@@ -6,7 +6,7 @@ import { removefromCart } from '../../Reducers/FIlterSlice';
 const Cart = () => {
 
    const cartitems = useSelector((state) => state.filter.cart);
-   console.log('cart items -',cartitems);
+   console.log('cart items  all -',cartitems);
 
    const dispatch = useDispatch();
 
