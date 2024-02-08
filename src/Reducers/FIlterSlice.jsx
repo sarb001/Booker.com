@@ -10,7 +10,8 @@ export const FilterSlice = createSlice({
         adults : 1,
         children : 1,
         numberofrooms: 1,
-        cart : [],
+        cart : localStorage.getItem('cartItems') ?  
+        JSON.parse(localStorage.getItem('cartItems')): [],
     },
     reducers : {
         sortbyadults : (state,action) => {

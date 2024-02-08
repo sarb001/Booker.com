@@ -47,38 +47,83 @@ const Search = () => {
   return (
     <div className="search">
 
-              <div> 
-                <span> Adult   </span> 
-                <button 
-                 disabled = {newadutls <=1}
-                className='border-red-700 border-2 '  onClick={() => handleadults('d')}> 
-                 <GrSubtractCircle /> 
-                </button> 
-                  {newadutls}
-                <button className='border-black   border-2 '  onClick={() => handleadults('i')}> 
-                 <IoAddCircle /> 
-                </button> 
+              <div className='grid grid-cols-2'> 
+                <div> Adult   </div> 
+                
+                <div className='grid grid-cols-3'>
+                  
+                  <div>
+                    <button 
+                    disabled = {newadutls <=1}
+                    className='border-black p-1 border-2 '  onClick={() => handleadults('d')}> 
+                      <GrSubtractCircle /> 
+                    </button> 
+                  </div>
+
+                   <div className='p-2'> {newadutls} </div> 
+
+                   <div>
+                    <button className='border-black  p-1  border-2 '  onClick={() => handleadults('i')}> 
+                    <IoAddCircle /> 
+                    </button>
+                   </div>
+                  
+                </div> 
+
               </div>
 
-              <div> 
-              <span> Children   </span> 
-                <button 
-                   disabled = {newchildren <= 1 }
-                className='border-red-700 border-2 '  onClick={() => handlechildren('d')}>  <GrSubtractCircle /> </button> 
-                    {newchildren} 
-                <button className='border-black border-2 '     onClick={() => handlechildren('i')}>  <IoAddCircle /> </button> 
-              </div>  
+              <div className='grid grid-cols-2'> 
+                <div> Children   </div> 
+                
+                <div className='grid grid-cols-3'>
+                  
+                  <div>
+                    <button 
+                     disabled = {newchildren <= 1 }
+                    className='border-black p-1 border-2 ' onClick={() => handlechildren('d')}> 
+                      <GrSubtractCircle /> 
+                    </button> 
+                  </div>
 
-              <div>
-              <span> Room  </span> 
-              <button 
-              disabled = {room <= 1 }
-              className='border-red-700 border-2 '   onClick={() => handleroom('d')}>  <GrSubtractCircle /> </button> 
-                {room}
-              <button className='border-black border-2 '      onClick={() => handleroom('i')}>  <IoAddCircle /> </button> 
+                   <div className='p-2'>  {newchildren} </div> 
+
+                   <div>
+                    <button className='border-black  p-1  border-2 '  onClick={() => handlechildren('i')}> 
+                    <IoAddCircle /> 
+                    </button>
+                   </div>
+                  
+                </div> 
+
               </div>
 
-              <div>
+              <div className='grid grid-cols-2'> 
+                <div> room   </div> 
+                
+                <div className='grid grid-cols-3'>
+                  
+                  <div>
+                    <button 
+                     disabled = {room <= 1 }
+                    className='border-black p-1 border-2 ' onClick={() => handleroom ('d')}> 
+                      <GrSubtractCircle /> 
+                    </button> 
+                  </div>
+
+                   <div className='p-2'>  {room} </div> 
+
+                   <div>
+                    <button className='border-black  p-1  border-2 '  onClick={() => handleroom('i')}> 
+                    <IoAddCircle /> 
+                    </button>
+                   </div>
+                  
+                </div> 
+
+              </div>
+
+
+              <div className='p-2 text-center'>
                   <button className='bg-slate-600 px-6 py-2'  onClick={() => searchHotels()} > Search </button>
               </div>
     </div>

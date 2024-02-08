@@ -47,7 +47,9 @@ const Navbar = () => {
                   </ul>
               </div>
 
-              <div className=' md:block lg:block xl:grid-rows-2 xl:grid  absolute right-16  md:static md:right-0'>
+              <div className=' 
+              grid grid-cols-2 text-center items-center
+              md:grid md:grid-cols-2 lg:grid xl:grid-cols-2 xl:grid  absolute right-16  md:static md:right-0'>
                 <span> {cartitems.length} </span>   
                 <span>  
                 <Link to = "/cart" className='text-4xl'> 

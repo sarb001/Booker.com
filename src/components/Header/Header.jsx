@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css' ;
-import  { DateRangePicker } from  'react-date-range' ;
+import  { DateRange  } from  'react-date-range' ;
 import { addDays } from 'date-fns';
 import { GrSubtractCircle } from "react-icons/gr";
 import { IoAddCircle } from "react-icons/io5";
@@ -34,21 +34,19 @@ const Header = () => {
     
     <div className="header m-16">
 
-      <div className='flex flex-row gap-40'>
+      <div className='flex flex-row gap-28 items-center'>
 
          <div  onClick={handledates}   className = 'relative bg-slate-500 p-2 w-[50%] h-[20%] flex flex-row justify-evenly'>
           <div>  {date[0].startDate.toLocaleDateString()} </div>
           <div>  {date[0].endDate.toLocaleDateString()} </div>
 
-         <div className='absolute top-5'>
+         <div className='absolute top-16  left-0 '>
             { openDate && (
-              <DateRangePicker 
-              onChange={item => setdate([item.selection])}
-              showSelectionPreview = {true}
-              moveRangeOnFirstSelection = {false}
-              months={1}
-              ranges={date}
-              direction='horizontal'
+              <DateRange
+                editableDateInputs = {true}
+                onChange={item => setdate([item.selection])}
+                moveRangeOnFirstSelection = {false}
+                ranges={date}
               />
               )
             }
