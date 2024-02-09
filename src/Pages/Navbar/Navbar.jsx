@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
        <div className="w-full">
-        <nav className='  bg-teal-200 md:bg-red-600  lg:bg-blue-600 
+        <nav className='  bg-teal-500 md:bg-red-600  lg:bg-blue-600 
         w-full h-full p-4'>
           
             <div className='
