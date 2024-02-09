@@ -3,10 +3,12 @@ import testimonials from '../../data/testimonials.json' ;
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-wrap m-16 justify-evenly">
+    <div className="flex flex-wrap m-2 justify-evenly">
           {testimonials.map((data) => {
              return (
-              <div className='w-[450px] h-[250px] flex flex-col overflow-hidden  bg-lime-500 m-16 p-4'  key = {data.id}>
+              <div className='w-[450px] h-[250px] flex flex-col overflow-hidden  bg-lime-500 m-2 p-4
+               md:w-[350px] md:h-[250px] md:mx-1 
+              '  key = {data.id}>
 
                 <div className='flex flex-row items-center '>
                   <span className='w-[60px] h-[60px] overflow-hidden'> 
@@ -15,7 +17,7 @@ const Testimonials = () => {
                   <div className='text-xl'> {data.name} </div> 
                 </div>
 
-                <div className='text-xl mt-4 '> {data.testimony} </div>
+                <div className='text-[16px] mt-4 '> {data.testimony} </div>
               </div>
              )
           })}

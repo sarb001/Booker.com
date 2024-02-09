@@ -13,8 +13,10 @@ const BestRooms = () => {
     <>
     
     <div className='m-4'>
-          <span> Best Rooms here - </span>  
-     <div className="flex flex-wrap ">
+          <div className='text-3xl'>
+             Best Rooms here - 
+          </div>  
+     <div className="flex flex-wrap justify-between">
       {featuredrooms && featuredrooms?.map((data) => {
          return (
           <div key = {data.id}>
@@ -26,16 +28,16 @@ const BestRooms = () => {
                 </div>
            
 
-              <div className='h-[40%] flex flex-col gap-2 p-1 '>
+              <div className='h-[40%] flex flex-col gap-1 p-1 '>
             
                   <div> Name - {data.name} </div>
-                  <div className='text-2xl'> Only Adults - {data?.adults} </div>
+                  <div className='text-xl'> Only Adults - {data?.adults} </div>
 
-                  <div className='text-2xl'>  
+                  <div className='text-xl'>  
                     {data?.children >= 1 ? ` Children - ${data?.children}` : "No Children Included" } 
                   </div>
 
-                  <div>
+                  <div className='my-4'>
                     <Link className = 'm-4 p-2  border-2 border-black rounded-xl'
                     to = {`/room/${data.id}`}> 
                       Book now ${data.price} 
