@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
-   const [showlink,setshowlink] = useState(true);
+   const [showlink,setshowlink] = useState(true); // 
 
    const cartitems = useSelector((state) => state.filter.cart);
    console.log('cart item length- ',cartitems.length);
