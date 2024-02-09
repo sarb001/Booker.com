@@ -7,13 +7,14 @@ import Facilities from './Facilites/Facilities'
 
 const Home = () => {
   return (
-    <section>
+    <>
        <Header />
        <About />
        <BestRooms />
+       {/*
        <Facilities  />
-       <Testimonials />
-    </section>
+       <Testimonials /> */}
+    </>
   )
 }
 

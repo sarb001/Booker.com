@@ -22,7 +22,7 @@ const Navbar = () => {
     <>
        <div className="w-full">
         <nav className='  bg-teal-500 md:bg-red-600  lg:bg-blue-600 
-        w-full h-full p-4'>
+           p-4'>
           
             <div className='
              flex justify-between items-center

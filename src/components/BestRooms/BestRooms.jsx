@@ -10,13 +10,15 @@ const BestRooms = () => {
       console.log('feature rooms-',featuredrooms);
 
   return (
-    <div className='m-16 '>
-          <h2> Best Rooms here - </h2>  
+    <>
+    
+    <div className='m-4'>
+          <span> Best Rooms here - </span>  
      <div className="flex flex-wrap ">
       {featuredrooms && featuredrooms?.map((data) => {
          return (
           <div key = {data.id}>
-            <div className="w-[370px] h-[460px]  p-4 overflow-hidden bg-slate-500 m-4">
+            <div className="w-[270px] h-[414px]  overflow-hidden bg-slate-500 m-4">
 
               
                 <div className='w-[100%] h-[60%]  object-cover '> 
@@ -24,7 +26,7 @@ const BestRooms = () => {
                 </div>
            
 
-              <div className='h-[40%] flex flex-col gap-2 '>
+              <div className='h-[40%] flex flex-col gap-2 p-1 '>
             
                   <div> Name - {data.name} </div>
                   <div className='text-2xl'> Only Adults - {data?.adults} </div>
@@ -49,6 +51,8 @@ const BestRooms = () => {
 
      </div>
     </div>
+    
+    </>
   )
 }
 
