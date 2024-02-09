@@ -13,10 +13,10 @@ const BestRooms = () => {
     <>
     
     <div className='m-4'>
-          <div className='text-3xl'>
+          <div className='text-3xl md:text-[45px]'>
              Best Rooms here - 
           </div>  
-     <div className="flex flex-wrap justify-between">
+     <div className="flex flex-wrap justify-between md:justify-around">
       {featuredrooms && featuredrooms?.map((data) => {
          return (
           <div key = {data.id}>
