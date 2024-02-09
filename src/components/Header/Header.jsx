@@ -34,7 +34,7 @@ const Header = () => {
     
     <div className="header m-16">
 
-      <div className='flex flex-row gap-28 items-center'>
+      <div className='flex flex-col gap-12 items-center'>
 
          <div  onClick={handledates}   className = 'relative bg-slate-500 p-2 w-[50%] h-[20%] flex flex-row justify-evenly'>
           <div>  {date[0].startDate.toLocaleDateString()} </div>
