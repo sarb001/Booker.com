@@ -30,7 +30,7 @@ const Navbar = () => {
              md:flex md:justify-around md:items-center '>
               
               <div> 
-                <a href = "/" > Bookr </a>
+                <a href = "/" > Booker </a>
               </div>
               
               <div className='lg:block'> 
