@@ -12,15 +12,20 @@ const BestRooms = () => {
   return (
     <>
     
-    <div className='m-4'>
+    <div className='m-4 lg:m-16 '>
           <div className='text-3xl md:text-[45px]'>
              Best Rooms here - 
           </div>  
-     <div className="flex flex-wrap justify-between md:justify-around">
+
+     <div className="flex flex-wrap justify-around md:justify-around 
+     lg:justify-between
+     ">
       {featuredrooms && featuredrooms?.map((data) => {
          return (
           <div key = {data.id}>
-            <div className="w-[270px] h-[414px]  overflow-hidden bg-slate-500 m-4">
+            <div className="w-[270px] h-[414px]  overflow-hidden bg-slate-500 m-4
+            lg:m-8  
+            ">
 
               
                 <div className='w-[100%] h-[60%]  object-cover '> 

@@ -3,7 +3,7 @@ import testimonials from '../../data/testimonials.json' ;
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-wrap m-2 justify-evenly">
+    <div className="flex flex-wrap m-2 justify-evenly  lg:justify-around">
           {testimonials.map((data) => {
              return (
               <div className='w-[450px] h-[250px] flex flex-col overflow-hidden  bg-lime-500 m-2 p-4

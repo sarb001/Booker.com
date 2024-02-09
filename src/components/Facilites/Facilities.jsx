@@ -3,15 +3,16 @@ import facilities from '../../data/facilities.json';
 
 const Facilities = () => {
   return (
-    <div className="facilties-component m-8 ">
+    <div className="facilties-component m-8 lg:m-20 ">
        <div className='text-4xl my-4'> Facilities  </div>
         {facilities.map((data) => {
            return (
               <>
               <div className='grid  grid-rows-2  gap-1 my-16  
-                md:grid-cols-2
-              '  key = {data.id}>
-                <div className='w-[100%] h-[90%] overflow-hidden' >
+                md:grid-rows-none
+                lg:grid-rows-none
+                md:grid-cols-2  lg:grid lg:grid-cols-2'  key = {data.id}>
+                <div className='w-[100%] h-[90%] overflow-hidden'  >
                    <img className='w-full h-full object-cover  rounded-2xl' src = {data.img}   alt = {data.title} /> 
                 </div>
 
