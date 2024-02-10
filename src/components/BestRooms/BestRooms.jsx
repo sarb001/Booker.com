@@ -18,8 +18,7 @@ const BestRooms = () => {
           </div>  
 
      <div className="flex flex-wrap justify-around md:justify-around 
-     lg:justify-between
-     ">
+     lg:justify-between">
       {featuredrooms && featuredrooms?.map((data) => {
          return (
           <div key = {data.id}>
