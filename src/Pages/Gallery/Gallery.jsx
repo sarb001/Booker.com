@@ -10,7 +10,6 @@ const Gallery = () => {
     {id : 4 , imgsrc : "/src/assests/contact-us.avif" , name : "fourth-image" },
     {id : 5 , imgsrc : "/src/assests/penthouse.jpeg" , name : "fifth-image" },
     {id : 6 , imgsrc : "/src/assests/spa.jpeg" , name : "sixth-image" },
-    {id : 7 , imgsrc : "/src/assests/header.png" , name : "seven-image" },
    ]
 
 
@@ -21,18 +20,22 @@ const Gallery = () => {
          <img className='w-full h-full object-cover' src = "/src/assests/gallery.avif" alt = "gallery" />
        </div>
 
-       {/* <div className="images-container">
-         <div>
+       <div className="images-container m-16">
+         <div className='flex flex-wrap flex-row'>
             {allimages.map((data) => {
                return (
+                <>
                 <div id = {data.id}>
-                   <div> <img src = {data.imgsrc}  alt = {data.name} /> </div>
+                   <div className='w-[100%] h-[250px] my-12 '> 
+                    <img className='w-full h-full object-cover' src = {data.imgsrc}  alt = {data.name} />
+                   </div>
                 </div>
+                </>
                )
             })}
            <img src = ""  alt = ""/>
          </div>
-       </div> */}
+       </div>
     </div>
   )
 }

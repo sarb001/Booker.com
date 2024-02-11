@@ -34,9 +34,10 @@ const Navbar = () => {
               </div>
               
               <div className='lg:block'> 
-                  <ul className={`flex flex-col absolute  top-[70px] w-[370px] right-0
-                      md:top-0 md:flex  md:flex-row md:w-full  md:static 
-                       
+                  <ul className={`flex flex-col  absolute  top-[65px] w-full right-0
+                     z-10  
+                     md:top-0 md:flex  md:flex-row md:w-full  md:static 
+                       bg-slate-400 md:bg-transparent lg:bg-transparent
                       ${showlink ? "hidden" : "block" }
                       lg:grid lg:grid-cols-4 lg: ` 
                   

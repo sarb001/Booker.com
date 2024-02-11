@@ -7,10 +7,9 @@ const Testimonials = () => {
           {testimonials.map((data) => {
              return (
               <div className='w-[450px] h-[250px] flex flex-col overflow-hidden  bg-lime-500 m-2 p-4
-               md:w-[350px] md:h-[250px] md:mx-1 
-              '  key = {data.id}>
+               md:w-[350px] md:h-[250px] md:mx-1 '  key = {data.id}>
 
-                <div className='flex flex-row items-center '>
+                <div className='flex flex-row items-center'>
                   <span className='w-[60px] h-[60px] overflow-hidden'> 
                     <img className ='w-[75%] h-[120%]  object-cover ' src = {data.image} alt = {data.name} /> 
                   </span>
