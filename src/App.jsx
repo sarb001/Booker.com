@@ -8,6 +8,7 @@ import Contact from './Pages/Contact/Contact'
 import Gallery from './Pages/Gallery/Gallery'
 import Navbar from './Pages/Navbar/Navbar'
 import SpecificRoom from './Pages/SpecificRoom'
+import NotFound from './Pages/404/NotFound'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
         <Route path = "/room/:roomid"    element = {<SpecificRoom />}>  </Route>
 
         <Route path = "/cart"     element = {<Cart />}>  </Route>
+
+        <Route path = "*"     element = {<NotFound />}>  </Route>
      </Routes>
   </>
   )

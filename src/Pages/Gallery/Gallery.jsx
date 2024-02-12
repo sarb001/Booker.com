@@ -16,7 +16,7 @@ const Gallery = () => {
     <div className="gallery">
        <div className='w-[100%] h-[300px] lg:relative'>
          
-        <div className='text-4xl absolute top-48  left-[41%] text-white lg:top-28 lg:left-1/2 '> Gallery </div>
+        <div className='text-4xl absolute top-48  left-[41%] text-white lg:top-28 lg:left1/ '> Gallery </div>
          <img className='w-full h-full object-cover' src = "/src/assests/gallery.avif" alt = "gallery" />
        </div>
 
