@@ -25,8 +25,6 @@ const BestRooms = () => {
             <div className="w-[270px] h-[414px]  overflow-hidden bg-slate-500 m-4
             lg:m-8  
             ">
-
-              
                 <div className='w-[100%] h-[60%]  object-cover '> 
                     <img className='w-full h-full'  src = {data.img}   alt = {data.name} />
                 </div>

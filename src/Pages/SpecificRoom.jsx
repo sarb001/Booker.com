@@ -34,29 +34,33 @@ const SpecificRoom = () => {
     
   return (
     <>
-     <div className="specificroom m-32 mt-16 flex flex-row">
-
-      <div className='w-[65%]'>
+     <div className='mt-12 mx-8'>
         <span className='text-4xl'> { name } </span>
-        <div className='object-cover w-[650px] h-[350px] my-8 rounded-2xl overflow-hidden'>
-           <img className='w-full h-full' src = {img}  alt = {name} /> 
+     </div>
+
+     <div className="specificroom  m-8 grid grid-rows-2 ">
+     
+        <div className='w-full overflow-hidden my-12 md:grid md:grid-cols-2 md:gap-8 md:items-center'>
+
+          <div className='object-cover w-[100%] h-[350px] my-8 rounded-2xl overflow-hidden'>
+            <img className='w-full h-full' src = {img}  alt = {name} /> 
+          </div>
+
+        <div className='text-xl'> {about}  </div>
+          <span className='grid grid-rows-3 mt-12 text-xl md:mt-0'>
+            <div>  Adults - {adults}  </div>
+            <div>  Bed Size - {bedSize}  </div>
+            <div> No. of  Children - {children} </div>
+          </span>
         </div>
 
-           <div className='text-xl'> {about}  </div>
-        <span className='text-3xl'>
-          <div>  Adults - {adults}  </div>
-          <div>  Bed Size - {bedSize}  </div>
-          <div> No. of  Children - {children} </div>
-        </span>
-      </div>
-
-      <div className='w-[35%]'>
-           <div className='text-3xl'>  Price - {price} </div>
-           <div className='m-8'>
-             <button  onClick={() => handleaddtocart({id,name,img,price})} className='py-2 px-8 bg-slate-500'>
-               Add to Cart </button>
-           </div>
-      </div>
+        <div className='w-full grid grid-cols-2 md:py-4'>
+            <div className='text-xl'>  Price - {price} </div>
+            <div>
+              <button  onClick={() => handleaddtocart({id,name,img,price})} className='py-2 px-8 bg-slate-500'>
+                Add to Cart </button>
+            </div>
+        </div>
 
     </div>
     </>
